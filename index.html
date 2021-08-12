@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video Player</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <img class="circle circle-top" src="./images/circle.png" alt="" />
+    <img class="circle circle-bottom" src="./images/circle.png" alt="" />
+    <div class="wrapper">
+      <div class="player">
+        <video
+          id="video"
+          class="video"
+          poster="./images/poster.jpg"
+          src="./videos/lofi.mp4"
+        ></video>
+        <div class="player-overlay">
+          <p id="title" class="player-title">
+            Musica para programar - Leonidas Esteban
+          </p>
+          <div class="player-actions">
+            <button
+              id="backward"
+              class="button"
+              aria-label="Retroceder 10 segundos"
+              hidden
+            ></button>
+            <button id="play" class="button" aria-label="Reproducir"></button>
+            <button
+              id="pause"
+              class="button"
+              aria-label="Pausar"
+              hidden
+            ></button>
+            <button
+              id="forward"
+              class="button"
+              aria-label="Adelantar 10 segundos"
+              hidden
+            ></button>
+          </div>
+          <div class="player-progress">
+            <input
+              id="progress"
+              type="range"
+              min="0"
+              value="0"
+              step="1"
+              hidden
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/index.js"></script>
+  </body>
+</html>
